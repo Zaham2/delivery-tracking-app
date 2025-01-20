@@ -1,4 +1,3 @@
-import React from 'react'
 import BlackSearchIconImg from '../../assets/images/search/SearchIconBlack.png'
 
 const NavSearchIcon = () => {

@@ -1,9 +1,10 @@
-import React from 'react'
 
 const OrderDetails = () => {
   return (
-    <div>
-      
+    <div className='order-details-container'>
+      <div className='order-details-header'>
+        
+      </div>
     </div>
   )
 }
