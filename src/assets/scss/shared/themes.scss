@@ -7,6 +7,7 @@
     --navbar-bg-color: #{$lightteal};
     --header-bg-color: #{$lightteal};
     --primary-color: #{$red};
+    --border-color: #{$lightgray};
 
     .dark {
         --background: #{$gray};
@@ -14,5 +15,6 @@
         --navbar-bg-color: #{$white};
         --header-bg-color: #{$gray};
         --primary-color: #{$red};
+        --border-color: #{$lightgray};
     }
 }

@@ -1,0 +1,9 @@
+
+.order-details-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border-color);
+  width: 90%;
+}

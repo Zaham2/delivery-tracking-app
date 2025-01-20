@@ -6,6 +6,8 @@
     justify-content: space-between;
     align-items: center;
     background-color: var(--navbar-bg-color);
+    width: 100%;
+    padding: 0.7em;
 
     @include responsive($desktop) {
         justify-content: space-around;
