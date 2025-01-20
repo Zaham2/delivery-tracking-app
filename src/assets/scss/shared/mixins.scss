@@ -1,0 +1,23 @@
+@use './breakpoints.scss' as *;
+@use './colors.scss' as *;
+@use 'sass:map';
+
+@mixin responsive($breakpoint) {
+    @if $breakpoint ==$tablet {
+        @media screen and (min-width: #{$breakpoint}) {
+            @content;
+        }
+    }
+
+    @else if $breakpoint ==$desktop {
+        @media screen and (min-width: #{$breakpoint}) {
+            @content;
+        }
+
+    }
+}
+
+// @mixin theme($theme) {
+//     background-color: map.get($theme, background-color);
+//     color: map.get($theme, text-color);
+// }

@@ -1,0 +1,18 @@
+@use './colors.scss' as *;
+@use './mixins.scss' as *;
+
+:root {
+    --background: #{$white};
+    --text-color: #{$black};
+    --navbar-bg-color: #{$lightteal};
+    --header-bg-color: #{$lightteal};
+    --primary-color: #{$red};
+
+    .dark {
+        --background: #{$gray};
+        --text-color: #{$white};
+        --navbar-bg-color: #{$white};
+        --header-bg-color: #{$gray};
+        --primary-color: #{$red};
+    }
+}

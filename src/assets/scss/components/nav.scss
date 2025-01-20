@@ -1,0 +1,43 @@
+@use '../shared/index.scss' as *;
+// ---- Navbar ----
+.navbar-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--navbar-bg-color);
+
+    @include responsive($desktop) {
+        justify-content: space-around;
+        flex-direction: row-reverse;
+    }
+}
+
+.nav-icons-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+}
+
+.nav-search-icon {
+    @include responsive($desktop) {
+        display: none;
+    }
+}
+
+// ---- Language Dropdown ----
+.lang-dropdown-menu-container {
+    max-width: 100px;
+    position: relative;
+}
+
+ul.lang-selected-dropdown-item {
+    background-color: transparent;
+}
+
+.lang-dropdown-item {
+    position: absolute;
+    list-style: none;
+}

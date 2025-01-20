@@ -1,0 +1,27 @@
+@use '../shared/index.scss' as *;
+
+
+.search-bar-container {
+    height: 2.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    border: 1px solid black;
+    transform: translateY(50%);
+
+}
+
+.search-icon {
+    background-color: var(--primary-color);
+    padding: 0.4em;
+    height: 100%;
+}
+
+.search-bar-input {
+    border: none;
+    outline: none;
+    padding: 0.2em;
+    height: 100%;
+    width: 100%;
+}
