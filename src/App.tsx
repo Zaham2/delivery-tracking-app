@@ -14,22 +14,19 @@ function App() {
   const [shipemntDetails, setShipmentDetails] = React.useState<RequiredTrackingDetails | null>(null);
 
   const context = React.useContext(TrackingContext);
-  console.log('my context', context)
 
   React.useEffect(() => {
 
     if (context?.trackingDetails) {
       getTrackingDetails(context?.trackingDetails.trackingNumber)
       .then((data) => {
-        console.log('data', data)
         if(!isErrorResponse(data)) {
           setShipmentDetails(mapTrackingDetails(data))
           setHasShipment(true)
         }
       })
       .catch((error) => {
-        console.log('ghalat')
-        console.log('error', error)
+        throw new Error(error)
       })
     }
   }, [context?.trackingDetails]);

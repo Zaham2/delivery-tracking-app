@@ -1,7 +1,6 @@
 import { FullTrackingDetailsResponse, RequiredTrackingDetails } from "./types";
 
 export function mapTrackingDetails(selectedShipment: FullTrackingDetailsResponse): RequiredTrackingDetails {
-    console.log('selectedShipment', selectedShipment)
     return {
         currentStatus: selectedShipment.CurrentStatus,
         trackingNumber: selectedShipment.TrackingNumber,
