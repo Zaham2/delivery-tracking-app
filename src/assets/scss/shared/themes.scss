@@ -6,15 +6,19 @@
     --text-color: #{$black};
     --navbar-bg-color: #{$lightteal};
     --header-bg-color: #{$lightteal};
-    --primary-color: #{$red};
     --border-color: #{$lightgray};
+    --primary-color: #{$red};
+    --secondary-color: #{$gray};
+    --tertiary-color: #{$teal};
 
     .dark {
         --background: #{$gray};
         --text-color: #{$white};
         --navbar-bg-color: #{$white};
         --header-bg-color: #{$gray};
-        --primary-color: #{$red};
         --border-color: #{$lightgray};
+        --primary-color: #{$red};
+        --secondary-color: #{$gray};
+        --tertiary-color: #{$teal};
     }
 }

@@ -22,6 +22,7 @@ export const getTrackingDetails = async (
       await response.json();
     if (isErrorResponse(data)) throw new Error(data.error);
 
+    console.log(data)
     return data;
   } catch (error) {
     throw new Error("Error fetching tracking details");
