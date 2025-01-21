@@ -10,6 +10,7 @@ export interface TrackingDetailsContextData {
 export interface FullTrackingDetailsResponse {
     // required fields
     CurrentStatus: OrderStatus;
+    TransitEvents: OrderStatus[];
     TrackingNumber: string;
     CreateDate: Date;
     PromisedDate: Date;
@@ -18,7 +19,6 @@ export interface FullTrackingDetailsResponse {
     // unneeded fields
     provider?: string;
     Type?: string;
-    TransitEvents?: object[];
     DropOffAddress?: object;
     isEditableShipment?: boolean;
     exceptionCode?: number;
@@ -36,6 +36,7 @@ export interface TrackingDetailsErrorResponse {
 }
 
 export interface RequiredTrackingDetails {
+    transitEvents: OrderStatus[];
     currentStatus: OrderStatus;
     trackingNumber: string;
     createDate: Date;

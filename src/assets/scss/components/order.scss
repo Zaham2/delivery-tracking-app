@@ -44,7 +44,7 @@
 .order-details-bottom-section {
   height: auto;
   width: 100%;
-  border-top: 1px solid var(--border-color);;
+  border-top: 1px solid var(--border-color);
   padding-bottom: 0;
   
   @include responsive($desktop) {
