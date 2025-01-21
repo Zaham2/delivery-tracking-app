@@ -17,12 +17,12 @@ const LanguageDropdown = () => {
     }
 
     return (
-        <div className='lang-dropdown-menu-container'>
+        <div className={`lang-dropdown-menu-container ${isOpen ? 'open' : ''}`}>
             <button className='lang-selected-dropdown-item' onClick={handleToggleDropdown}>{selectedLanguage}</button>
-            <ul>
-                {isOpen && Object.values(LANGUAGES)?.map((language: string) => {
+            <ul className='lang-dropdown-items'>
+                {isOpen && Object.values(LANGUAGES)?.map((language: string, index: number) => {
                     return (
-                        <li className='lang-dropdown-item' onClick={() => handleLanguageChange(language)}>
+                        <li key={index} className='lang-dropdown-item' onClick={() => handleLanguageChange(language)}>
                             {language}
                         </li>
                     )

@@ -66,3 +66,20 @@
     border: 1px solid var(--border-color);
     margin-bottom: 1em;
 }
+
+// ---- empty tracking details ----
+.tracking-details-empty {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1.5em;
+    @include responsive($desktop) {
+        height: 100%;
+    }
+}
+
+.tracking-details-empty-text {
+    font-size: 1em;
+    font-weight: 600;
+    color: var(--secondary-color);
+}

@@ -8,3 +8,14 @@
     margin-bottom: 1em;
 }
 
+.header-title {
+    font-size: 2em;
+    font-weight: 600;
+    color: var(--text-colors);
+}
+
+.header-subtitle {
+    font-size: 0.8em;
+    text-align: center;
+    color: var(--secondary-color);
+}
