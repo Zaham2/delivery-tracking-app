@@ -11,11 +11,12 @@ export function mapTrackingDetails(selectedShipment: FullTrackingDetailsResponse
     }
 }
 
-export function formatDate(date: Date): string {
+export function formatDate(date: Date, fullDay: boolean = false): string {
     const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+    const fullDays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
     const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
     
-    const dayName = days[date.getDay()];
+    const dayName = fullDay ? fullDays[date.getDay()] : days[date.getDay()];
     const monthName = months[date.getMonth()];
     const dayOfMonth = date.getDate();
 
@@ -32,23 +33,23 @@ export function getRemainingDays(date: Date | null): number | null {
 }
 
 export function orderStatusTextGenerator(remainingDays: number, orderStatus: string): string {
-    if(orderStatus === SHIPMENT_STATUS.DELIVERED) {
+    if(orderStatus.toLowerCase() === SHIPMENT_STATUS.DELIVERED.toLowerCase()) {
       return `Your order has been delivered`
     }
   
-    if(orderStatus === SHIPMENT_STATUS.RETURNED) {
+    if(orderStatus.toLowerCase() === SHIPMENT_STATUS.RETURNED.toLowerCase()) {
       return `Your order has been returned`
     }
   
-    if(orderStatus === SHIPMENT_STATUS.OUT_FOR_DELIVERY) {
+    if(orderStatus.toLowerCase() === SHIPMENT_STATUS.OUT_FOR_DELIVERY.toLowerCase()) {
       return `Your order is out for delivery`
     }
   
-    if(orderStatus === SHIPMENT_STATUS.IN_TRANSIT) {
+    if(orderStatus.toLowerCase() === SHIPMENT_STATUS.IN_TRANSIT.toLowerCase()) {
       return `Your order is in transit`
     }
 
-    if(orderStatus === SHIPMENT_STATUS.RECEIVED_AT_WAREHOUSE) {
+    if(orderStatus.toLowerCase() === SHIPMENT_STATUS.RECEIVED_AT_WAREHOUSE.toLowerCase()) {
       return `Your order has been received at our warehouse`
     }
   

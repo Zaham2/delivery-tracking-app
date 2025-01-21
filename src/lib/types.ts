@@ -9,11 +9,7 @@ export interface TrackingDetailsContextData {
 
 export interface FullTrackingDetailsResponse {
     // required fields
-    CurrentStatus: {
-        state: string;
-        code: number;
-        timestamp: Date;
-    };
+    CurrentStatus: OrderStatus;
     TrackingNumber: string;
     CreateDate: Date;
     PromisedDate: Date;
@@ -40,15 +36,17 @@ export interface TrackingDetailsErrorResponse {
 }
 
 export interface RequiredTrackingDetails {
-    currentStatus: {
-        state: string;
-        code: number;
-        timestamp: Date;
-    };
+    currentStatus: OrderStatus;
     trackingNumber: string;
     createDate: Date;
     promisedDate: Date;
     scheduleDate: Date;
+}
+
+export interface OrderStatus {
+  state: string;
+  code: number;
+  timestamp: Date;
 }
 
 // Not very good with type guards, this is AI generated

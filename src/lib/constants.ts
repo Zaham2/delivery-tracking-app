@@ -17,9 +17,8 @@ export const SHIPMENT_STATUS = {
 }
 
 export const SHIPMENT_TIMELINE_STATUSES = {
-    // SHIPMENT_CREATED: 'Shipment Created',  // this is not present in the figma design
     PICKED_UP: 'Picked Up',
-    IN_TRANSIT: 'In Transit',
+    PROCESSING: 'Processing',
     OUT_FOR_DELIVERY: 'Out for Delivery',
     DELIVERED: 'Delivered',
 }

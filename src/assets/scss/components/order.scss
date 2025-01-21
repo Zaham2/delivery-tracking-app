@@ -43,16 +43,25 @@
 
 .order-details-bottom-section {
   height: auto;
+  width: 100%;
   border-top: 1px solid var(--border-color);;
+  padding-bottom: 0;
+  
+  @include responsive($desktop) {
+    padding-bottom: 1em;
+  }
 }
 
 // ---- timeline ----
 
 .order-details-timeline {
   display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: center;
+  flex-direction: column;
+  @include responsive($desktop) {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+  }
 }
 
 .order-details-timeline-item {
@@ -64,6 +73,21 @@
   gap: 1em;
   position: relative;
   width: 20%;
+  &.completed {
+    .order-details-timeline-item-connector {
+      border: none;
+      background-color: var(--tertiary-color);
+    }
+    
+    .order-details-timeline-item-dot {
+      background-color: var(--tertiary-color);
+      border-color: var(--tertiary-color);
+    }
+
+    .order-details-timeline-item-label {
+      color: var(--text-color);
+    }
+  }
 }
 
 .order-details-timeline-item-dot {
@@ -72,26 +96,43 @@
   border-radius: 50%;
   background-color: var(--background);
   border: 1px solid var(--border-color);;
-  position: relative;
   z-index: 1;
 }
 
-.order-details-timeline-item-label {
+.order-details-timeline-item-label, .order-details-timeline-item-label-date {
+
   position: absolute;
-  font-size: 0.6rem;
-  color: var(--secondary-color);
-  top: 100%;
-  width: auto;
-  text-align: center;
+  text-wrap: nowrap;
+  text-align: left;
+  font-size: 0.65em;
+  left: 100%;
+  @include responsive($desktop) {
+    color: var(--secondary-color);
+    top: 80%;
+    width: auto;
+    text-align: center;
+    left: unset;
+  }
+
+}
+
+.order-details-timeline-item-label-date {
+  transform: translateY(100%);
 }
 
 .order-details-timeline-item-connector {
   position: absolute;
   top: 50%;
-  left: 100%;
-  width: 100%;
-  height: 2px;
-  transform: translateX(-50%);
-  background-color: var(--border-color);
-  content: "";
+  width: 2px;
+  height: 100%;
+  border: 1px dashed var(--border-color);
+  content: '';
+
+  @include responsive($desktop) {
+    top: 50%;
+    left: 100%;
+    width: 100%;
+    height: 2px;
+    transform: translateX(-50%);
+  }
 }
