@@ -32,7 +32,7 @@
         top: 2em;
         width: 3px;
         height: calc(100% - (2*var(--bullet-size)));
-        background-color: var(--border-color);
+        background-color: var(--background);
         left: var(--line-margin);
         transform: translateX(50%);
     }
