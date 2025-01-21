@@ -1,0 +1,85 @@
+@use "../shared/index.scss" as *;
+
+.tracking-details {
+
+    --bullet-size: 1em;
+    --line-margin: -2em;
+
+    display: flex;
+    flex-direction: column;
+    margin-top: 3em;
+    gap: 0.5em;
+    font-family: $Cairo;
+}
+
+.tracking-details-title {
+    font-size: 1.5em;
+    font-weight: 600;
+    color: var(--secondary-color);
+    transform: translateX(-3em);
+    margin-bottom: 1em;
+    height: 100%;
+    width: 100%;
+}
+
+.tracking-details-item-container {
+    position: relative;
+    padding-left: 1em;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 2em;
+        width: 3px;
+        height: calc(100% - (2*var(--bullet-size)));
+        background-color: var(--border-color);
+        left: var(--line-margin);
+        transform: translateX(50%);
+    }
+}
+
+
+.tracking-details-day {
+    font-size: 1.2em;
+    font-weight: 600;
+    margin-bottom: 1em;
+}
+
+.tracking-details-day-bullet {
+    position: absolute;
+    top: 0.2em;
+    left: var(--line-margin);
+    width: var(--bullet-size);
+    height: var(--bullet-size);
+    border-radius: 50%;
+    background-color: var(--border-color);
+}
+
+.transit-event {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+    border-radius: 4px;
+    text-align: left;
+    gap: 0.5rem;
+    border: 1px solid var(--border-color);
+    margin-bottom: 1em;
+}
+
+// ---- empty tracking details ----
+.tracking-details-empty {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1.5em;
+    @include responsive($desktop) {
+        height: 100%;
+    }
+}
+
+.tracking-details-empty-text {
+    font-size: 1em;
+    font-weight: 600;
+    color: var(--secondary-color);
+}

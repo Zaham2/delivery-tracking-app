@@ -4,6 +4,7 @@ import { FullTrackingDetailsResponse, RequiredTrackingDetails } from "./types";
 export function mapTrackingDetails(selectedShipment: FullTrackingDetailsResponse): RequiredTrackingDetails {
     return {
         currentStatus: selectedShipment.CurrentStatus,
+        transitEvents: selectedShipment.TransitEvents || [],
         trackingNumber: selectedShipment.TrackingNumber,
         createDate: new Date(selectedShipment.CreateDate),
         promisedDate: new Date(selectedShipment.PromisedDate),
@@ -23,6 +24,11 @@ export function formatDate(date: Date, fullDay: boolean = false): string {
     return `${dayName} ${monthName}. ${dayOfMonth}`;
 }
 
+export function formatTime(date: Date): string {
+    const hours = date.getHours();
+    const minutes = date.getMinutes();
+    return `${hours}:${minutes}`;
+}
 export function getRemainingDays(date: Date | null): number | null {
     if(!date) return null
 

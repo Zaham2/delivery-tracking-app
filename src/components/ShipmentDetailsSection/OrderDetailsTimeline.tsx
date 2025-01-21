@@ -25,7 +25,6 @@ const OrderDetailsTimeline = (props: OrderDetailsTimelineProps) => {
                 const isCompleted = index < statusCompletionMap[props.orderStatus.state.toLowerCase()]
                 const shipmentTimelineStatuses = Object.values(SHIPMENT_TIMELINE_STATUSES).length
                 const isLastItem = index === shipmentTimelineStatuses - 1
-                // const fullDateDisplay
 
                 return (
                     <div
