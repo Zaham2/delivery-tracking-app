@@ -29,7 +29,6 @@ export function formatTime(date: Date): string {
     const minutes = date.getMinutes();
     return `${hours}:${minutes}`;
 }
-
 export function getRemainingDays(date: Date | null): number | null {
     if(!date) return null
 

@@ -19,6 +19,8 @@ export interface FullTrackingDetailsResponse {
     // unneeded fields
     provider?: string;
     Type?: string;
+    TransitEvents?: object[];
+
     DropOffAddress?: object;
     isEditableShipment?: boolean;
     exceptionCode?: number;
