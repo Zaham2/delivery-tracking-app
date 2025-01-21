@@ -10,15 +10,17 @@
     --primary-color: #{$red};
     --secondary-color: #{$gray};
     --tertiary-color: #{$teal};
+    --search-bar-bg-color: #{$white};
 
     .dark {
-        --background: #{$gray};
+        --background: #{$black};
         --text-color: #{$white};
-        --navbar-bg-color: #{$white};
-        --header-bg-color: #{$gray};
-        --border-color: #{$lightgray};
+        --navbar-bg-color: #{$black};
+        --header-bg-color: #{$black};
+        --border-color: #{$red};
         --primary-color: #{$red};
         --secondary-color: #{$gray};
         --tertiary-color: #{$teal};
+        --search-bar-bg-color: #{$black};
     }
 }
